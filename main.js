@@ -31,16 +31,14 @@ const bikes = [
     },
 ]
 
-//TROVIAMO IL PESO MINORE ATTRAVERSO MATH.MIN
-const minWeight = Math.min(...bikes.map(weight => weight.peso));
+const weightBikes = bikes.map(wBikes => wBikes.weight);
+console.log(weightBikes);
 
-//FILTRIAMO GLI OGGETTI 
-const findMinWeight = bikes.filter(weight => weight.peso === minWeight);
+const minWeight = Math.min(...weightBikes);
+console.log(minWeight);
 
-//STAMPIAMO IL PESO MINIMO
-findMinWeight.forEach(weight => {
-    console.log(weight.weight);
-})
+const minWbikes = weightBikes.filter(wBikes => wBikes.weight < minWeight)
+console.log(minWbikes);
 
 // Snack2
 // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
