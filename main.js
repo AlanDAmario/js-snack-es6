@@ -35,10 +35,7 @@ const weightBikes = bikes.map(wBikes => wBikes.weight);
 console.log(weightBikes);
 
 const minWeight = Math.min(...weightBikes);
-console.log(minWeight);
-
-const minWbikes = weightBikes.filter(wBikes => wBikes.weight < minWeight)
-console.log(minWbikes);
+console.log(`il peso è di ${minWeight} kg`);
 
 // Snack2
 // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
